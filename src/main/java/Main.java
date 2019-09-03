@@ -5,8 +5,6 @@ public class Main {
         try {
             JsonFile jsonfile = new JsonFile("1", "2", "3", "4", "5", "6", "7");
             jsonfile.createTemp();
-            jsonfile.readTemp();
-            //System.out.println(jsonfile.createTemp().getJSONArray("Celsius");
             //jsonfile.readTemp();
 
         } catch (Exception e) {
