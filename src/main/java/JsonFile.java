@@ -1,107 +1,46 @@
+import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 import java.io.*;
-import java.util.Collections;
-import java.util.Iterator;
+
 
 class JsonFile {
 
-    String one;
-    String two;
-    String three;
-    String four;
-    String five;
-    String six;
-
-    public String getOne() {
-        return one;
+    public JsonFile() {
     }
 
-    public void setOne(String one) {
-        this.one = one;
-    }
-
-    String seven;
-
-
-    public JsonFile(String one, String two, String three, String four, String five, String six, String seven) {
-        this.one = one;
-        this.two = two;
-        this.three = three;
-        this.four = four;
-        this.five = five;
-        this.six = six;
-        this.seven = seven;
-    }
-
+    //Denna metod skapar Json fil med en array med 20 olika random grader.
     public JSONObject createTemp() {
-        //JsonFile jsonValues = new JsonFile(one, two, three, four, five, six, seven);
-
         JSONObject jsonObject = new JSONObject();
         JSONArray jsonArray = new JSONArray();
 
-        jsonArray.put(this.one);
-        jsonArray.put(this.two);
-        jsonArray.put(this.three);
-        jsonArray.put(this.four);
-        jsonArray.put(this.five);
-        jsonArray.put(this.six);
-        jsonArray.put(this.seven);
-
-        jsonObject.put("Celsius", jsonArray);
-
-
+        //Sätter temperatur värden i en array
+        jsonObject.put("Temperatur", jsonArray);
+        for (int i = 0; i < 20; i++) {
+            int rnd;
+            int minimum = -40;
+            int maximum = 40;
+            rnd = minimum + (int) (Math.random() * (maximum - minimum));
+            jsonArray.put(new JSONObject().put("C", rnd).put("F", "")); //Sättder ditt tomt värde för att sätta in sen i.
+        }
+        //Skapar Json filen med värden
         try {
             FileWriter file = new FileWriter("Temp.json");
             file.write(jsonObject.toString());
             file.close();
-            //System.out.println("Detta har skrivits till filen: \n" + jsonObject);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
         return jsonObject;
     }
 
-    public Object readTemp() throws Exception { //Detta ska användas sen för att läsa till hemsidan.
-        FileReader reader = new FileReader("Temp.json");
-        JSONParser jsonParser = new JSONParser();
-        //System.out.println(createTemp().get("Celsius");
-        //createTemp()
-        //System.out.println(jsonParser.parse(reader));
-        return jsonParser.parse(reader);
-
-
-
-            /*JSONParser jsonParser = new JSONParser();
-            BufferedReader br = null;
-
-            //FileReader fileReader = new FileReader("Temp.json");
-            //Object object = jsonParser.parse(fileReader);
-
-              /*  Object object = jsonParser.parse(new FileReader("Temp.json"));
-                String random = object.toString();
-                JSONObject jsonObject = (JSONObject) object;
-                JSONArray companyList = (JSONArray) jsonObject.getJSONArray("Celsius");
-                System.out.println(companyList);
-                String inline = " ";
-
-                Iterator<Object> iterator = companyList.iterator();
-                while (iterator.hasNext()) {
-
-                    System.out.println(iterator.toString());
-               }
-
-
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }*/
+    public JSONObject readTemp() throws Exception { //Kör denna metod för att läsa av jsonfilen efter den har skapats.
+        File file = new File("Temp.json");
+        String content = FileUtils.readFileToString(file, "utf-8");
+        return new JSONObject(content);
     }
 
 }
