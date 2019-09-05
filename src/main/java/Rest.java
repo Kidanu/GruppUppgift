@@ -21,11 +21,12 @@ public class Rest {
 
     public static void main(String[] args) throws IOException {
 
-}
+    }
+
     int antalC = 0;
     int antalF = 0;
     int cValues = 0;
-    int fValues = 0;
+    double fValues = 0;
     String averageF = "";
     String averageC = "";
 
@@ -44,19 +45,19 @@ public class Rest {
             cValues += (Integer) arrayObjekt.get("C");
             antalC = i;
         }
-        System.out.println(antalC);
     }
 
     public void sumForTempF(JSONObject jsonObject) {                                //Räknar ut summan för alla farenheit grader
         JSONArray array = jsonObject.getJSONArray("Temperatur");
         for (int i = 0; i < array.length(); i++) {
             JSONObject arrayObjekt = array.getJSONObject(i);
-            fValues += (Integer) arrayObjekt.get("F");
+            //fValues += (double) arrayObjekt.get("F");
+           fValues += Double.parseDouble((String) arrayObjekt.get("F"));
             antalF += i;
         }
     }
 
-    public void  averageTempMethodF () {                                            //Skickar rest api för att räkna ut medelvärdet på Farenheit
+    public void averageTempMethodF() {                                            //Skickar rest api för att räkna ut medelvärdet på Farenheit
         {
             try {
                 URL url = new URL("https://api.mathjs.org/v4/?expr=" + this.fValues + "%2F" + this.antalF + "");
@@ -94,6 +95,7 @@ public class Rest {
                         averageC += scanner.nextLine();
                     }
                     scanner.close();
+                    System.out.println(averageC);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -102,7 +104,7 @@ public class Rest {
         }
     }
 
-    public JSONObject averageTempJsonFile(){
+    public JSONObject averageTempJsonFile() {
         JSONObject jsonObject = new JSONObject();
 
         jsonObject.put("Celsius medel", averageC);

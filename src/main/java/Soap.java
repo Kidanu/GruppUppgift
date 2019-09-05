@@ -3,6 +3,8 @@ import org.json.JSONObject;
 import sun.plugin2.message.Message;
 
 import javax.xml.soap.*;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Soap {
     String xmlUrl = "https://www.w3schools.com/xml/tempconvert.asmx?WSDL";
@@ -20,6 +22,15 @@ public class Soap {
             String svarTemp = arrayObjekt.get("C").toString();
             String farenheit = callSoapWebService(svarTemp);
             arrayObjekt.put("F", farenheit);
+        }
+        try {
+            FileWriter file = new FileWriter("Nya_filen.json", true); //Skapar en ny jsonfil med även Farenheit värden i.
+            file.write(jsonCelsius.toString());
+
+            file.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
         return jsonCelsius;
