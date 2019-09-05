@@ -24,9 +24,8 @@ public class Soap {
             arrayObjekt.put("F", farenheit);
         }
         try {
-            FileWriter file = new FileWriter("Nya_filen.json", true); //Skapar en ny jsonfil med även Farenheit värden i.
+            FileWriter file = new FileWriter("Nya_filen.json"); //Skapar en ny jsonfil med även Farenheit värden i.
             file.write(jsonCelsius.toString());
-
             file.close();
 
         } catch (IOException e) {

@@ -18,7 +18,7 @@ class JsonFile {
 
         //Sätter temperatur värden i en array
         jsonObject.put("Temperatur", jsonArray);
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 3; i++) {
             int rnd;
             int minimum = -40;
             int maximum = 40;
