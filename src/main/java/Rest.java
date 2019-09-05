@@ -43,8 +43,8 @@ public class Rest {
         for (int i = 0; i < array.length(); i++) {
             JSONObject arrayObjekt = array.getJSONObject(i);
             cValues += (Integer) arrayObjekt.get("C");
-            antalC = i;
         }
+        antalC = array.length();
     }
 
     public void sumForTempF(JSONObject jsonObject) {                                //Räknar ut summan för alla farenheit grader
@@ -53,8 +53,8 @@ public class Rest {
             JSONObject arrayObjekt = array.getJSONObject(i);
             //fValues += (double) arrayObjekt.get("F");
            fValues += Double.parseDouble((String) arrayObjekt.get("F"));
-            antalF += i;
         }
+        antalF = array.length();
     }
 
     public void averageTempMethodF() {                                            //Skickar rest api för att räkna ut medelvärdet på Farenheit
