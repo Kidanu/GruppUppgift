@@ -22,8 +22,6 @@ public class Rest {
     public static void main(String[] args) throws IOException {
 
 }
-
-
     int antalC = 0;
     int antalF = 0;
     int cValues = 0;
