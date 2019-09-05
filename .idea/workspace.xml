@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fc7d410-2ef0-4374-ba85-b3f71861b60d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/AverageTemp.json" beforeDir="false" afterPath="$PROJECT_DIR$/AverageTemp.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nya_filen.json" beforeDir="false" afterPath="$PROJECT_DIR$/Nya_filen.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp.json" beforeDir="false" afterPath="$PROJECT_DIR$/Temp.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JsonFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JsonFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Rest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -46,31 +42,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Nya_filen.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="65" lean-forward="true" selection-start-column="65" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AverageTemp.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="63" lean-forward="true" selection-start-column="63" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Soap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
+            <state relative-caret-position="238">
+              <caret line="16" column="97" selection-start-line="16" selection-start-column="97" selection-end-line="16" selection-end-column="97" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#main#0;class#Soap#0" />
+                <element signature="method#convertsCelsiusToFarenheit#0;class#Soap#0" />
+                <element signature="method#callSoapWebService#0;class#Soap#0" />
               </folding>
             </state>
           </provider>
@@ -79,10 +59,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Rest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="54" column="72" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
+            <state relative-caret-position="102">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#main#0;class#Rest#0" />
+                <element signature="e#734#931#0" />
+                <element signature="method#sumForTempC#0;class#Rest#0" />
+                <element signature="method#sumForTempF#0;class#Rest#0" />
+                <element signature="method#averageTempMethodF#0;class#Rest#0" />
+                <element signature="method#averageTempMethodC#0;class#Rest#0" />
+                <element signature="method#averageTempJsonFile#0;class#Rest#0" />
               </folding>
             </state>
           </provider>
@@ -254,7 +240,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.13646056" />
       <window_info id="Structure" order="1" sideWeight="0.50080514" side_tool="true" weight="0.13646056" />
@@ -265,12 +250,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32719395" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32719395" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32719395" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32719395" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32991454" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32719395" />
@@ -338,6 +323,20 @@
     <entry file="file://$PROJECT_DIR$/Temp.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/AverageTemp.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="63" lean-forward="true" selection-start-column="63" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Nya_filen.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="65" lean-forward="true" selection-start-column="65" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JsonFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -360,35 +359,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Soap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
+        <state relative-caret-position="238">
+          <caret line="16" column="97" selection-start-line="16" selection-start-column="97" selection-end-line="16" selection-end-column="97" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#main#0;class#Soap#0" />
+            <element signature="method#convertsCelsiusToFarenheit#0;class#Soap#0" />
+            <element signature="method#callSoapWebService#0;class#Soap#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Nya_filen.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="65" lean-forward="true" selection-start-column="65" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AverageTemp.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="63" lean-forward="true" selection-start-column="63" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Rest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="54" column="72" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
+        <state relative-caret-position="102">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#Rest#0" />
+            <element signature="e#734#931#0" />
+            <element signature="method#sumForTempC#0;class#Rest#0" />
+            <element signature="method#sumForTempF#0;class#Rest#0" />
+            <element signature="method#averageTempMethodF#0;class#Rest#0" />
+            <element signature="method#averageTempMethodC#0;class#Rest#0" />
+            <element signature="method#averageTempJsonFile#0;class#Rest#0" />
           </folding>
         </state>
       </provider>
