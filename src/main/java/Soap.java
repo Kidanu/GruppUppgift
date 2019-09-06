@@ -1,6 +1,5 @@
 import org.json.JSONArray;
 import org.json.JSONObject;
-import sun.plugin2.message.Message;
 
 import javax.xml.soap.*;
 import java.io.FileWriter;
