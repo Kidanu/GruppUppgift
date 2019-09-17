@@ -5,15 +5,10 @@ import javax.net.ssl.HttpsURLConnection;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLOutput;
 import java.util.*;
 
 
 class Rest {
-
-    public static void main(String[] args) throws IOException {
-
-    }
 
     Main main = new Main();
     Scanner scan = new Scanner(System.in);
@@ -93,9 +88,9 @@ class Rest {
 
         try {
             System.out.println("Skriv namn på Average temperatur filen");
-            main.jsonfileName = scan.nextLine();
-            FileWriter file = new FileWriter(main.jsonfileName + ".json");
-            main.jsonFileNameArray.add(main.jsonfileName);
+            Main.jsonfileName = scan.nextLine();
+            FileWriter file = new FileWriter(Main.jsonfileName + ".json");
+            Main.jsonFileNameArray.add(Main.jsonfileName);
             file.write(jsonObject.toString());
             file.close();
         } catch (IOException e) {
@@ -109,51 +104,51 @@ class Rest {
         JSONArray array = jsonObject.getJSONArray("Temperatur");
         JSONObject newObject = new JSONObject();
 
-        List<Integer> medianListC = new ArrayList<Integer>();
+        ArrayList<Integer> medianListC = new ArrayList<Integer>();
+        ArrayList<Integer> medianListF = new ArrayList<Integer>();
+
         for (int i = 0; i < array.length(); i++) {
             JSONObject arrayObjectRandom = array.getJSONObject(i);
             int C = (Integer) arrayObjectRandom.get("C");
             medianListC.add(C);
-        }
-        List<Double> medianListF = new ArrayList<Double>();
-        for (int i = 0; i < array.length(); i++) {
-            JSONObject arrayObjectRandom = array.getJSONObject(i);
-            int C = (Integer) arrayObjectRandom.get("C");
-            medianListC.add(C);
+            String F = (String) arrayObjectRandom.get("F");
+            double d = Double.valueOf(F);
+            int value = (int) d;
+            medianListF.add((value));
         }
         Collections.sort(medianListC);
-        int middleSlotC = array.length() / 2;
-        double medianValueC = 0;
-
-        Collections.sort(medianListF);
-        int middleSlotF = array.length() / 2;
-        double medianValueF = 0;
-
-        if (medianListC.size() % 2 == 1) {
-            medianValueC = medianListC.get(middleSlotC);
+        int middleSlotC = medianListC.size();
+        int medianValueC = 0;
+        if (middleSlotC % 2 == 1) {
+            int odd = (middleSlotC / 2) + 1;
+            medianValueC = medianListC.get(odd - 1);
         } else {
-            int K = medianListC.get(middleSlotC);
-            medianValueC = ((K - 1) + K) / 2;
+            int notOdd = middleSlotC / 2;
+            int K = medianListC.get(notOdd);
+            medianValueC = (K + K) / 2;
         }
-
-        if (medianListF.size() % 2 == 1) {
-            medianValueF = medianListF.get(middleSlotF);
-        } else {
-            int K = medianListC.get(middleSlotC);
-            medianValueF = ((K - 1) + K) / 2;
-        }
-
         String strC = String.valueOf(medianValueC);
         newObject.put("Celsius Median", strC);
-
+//----------------------------------------------
+        Collections.sort(medianListF);
+        int middleSlotF = medianListF.size();
+        int medianValueF = 0;
+        if (middleSlotF % 2 == 1) {
+            int odd = (middleSlotF / 2) + 1;
+            medianValueF = medianListF.get(odd - 1);
+        } else {
+            int notOdd = middleSlotF / 2;
+            int K = medianListF.get(Math.round(notOdd));
+            medianValueF = ((K + K) / 2);
+        }
         String strF = String.valueOf(medianValueF);
         newObject.put("FarebgeutMedian", strF);
 
         try {
             System.out.println("Skriv namn på Median temperatur filen");
-            main.jsonfileName = scan.nextLine();
-            FileWriter file = new FileWriter(main.jsonfileName + ".json");
-            main.jsonFileNameArray.add(main.jsonfileName);
+            Main.jsonfileName = scan.nextLine();
+            FileWriter file = new FileWriter(Main.jsonfileName + ".json");
+            Main.jsonFileNameArray.add(Main.jsonfileName);
             file.write(newObject.toString());
             file.close();
         } catch (IOException e) {

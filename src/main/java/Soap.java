@@ -13,7 +13,6 @@ public class Soap {
 
     public static void main(String[] args) throws Exception {
 
-        //String svar = callSoapWebService("25");
     }
 
     //Här använder vi värdet Celius från JSonfilen med arrayen och hämtar ut farenheit värden med hjälp utav callSoapMetoden

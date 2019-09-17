@@ -56,7 +56,6 @@ class JsonFile {
         File file = new File(main.jsonfileName + ".json");
         String content = FileUtils.readFileToString(file, "utf-8");
         return new JSONObject(content);
-
     }
 
     public void printObjects() {
@@ -66,20 +65,12 @@ class JsonFile {
 
     public void printObjectsSeparate() throws IOException {
 
-
         System.out.println("Vilken JsonFil vill du skriva ut");
         System.out.println(main.jsonFileNameArray + "\n");
         main.jsonfileName = scan.nextLine();
         File file = new File(main.jsonfileName + ".json");
         String content = FileUtils.readFileToString(file, "utf-8");
         System.out.println(content);
-        //return new JSONObject(content);
 
-       /* System.out.println("Vilkfen fil vill du titta igenom?");
-        for (int i = 0;i < main.jsonFileNameArray.size();i++){
-            System.out.println(main.jsonFileNameArray.get(i) + i);
-        }
-        int siffra = scan.nextInt();
-        System.out.println(main.jsonFileNameArray.g);*/
     }
 }

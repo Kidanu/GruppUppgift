@@ -1,6 +1,7 @@
 import jdk.nashorn.internal.ir.WhileNode;
 import org.json.JSONObject;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.EmptyStackException;
@@ -37,26 +38,38 @@ public class Main {
                         System.out.println("-------------------------\n");
                         break;
                     case 2:
-                        jsonFile.printObjects();
-                        JSONObject F = soap.convertsCelsiusToFarenheit(jsonFile.readTemp()); //Måste sätta dit en variabel för att den ska kunn add:as till jsonFileArray variablen.
-                        System.out.println("-------------------------\n");
-                        break;
+                        try {
+                            jsonFile.printObjects();
+                            JSONObject F = soap.convertsCelsiusToFarenheit(jsonFile.readTemp()); //Måste sätta dit en variabel för att den ska kunn add:as till jsonFileArray variablen.
+                            System.out.println("-------------------------\n");
+                        } catch (FileNotFoundException e) {
+                            System.out.println("Filen finns inte \n");
+                        }
+                        continue;
                     case 3:
-                        jsonFile.printObjects();
-                        rest.sumForTempCF(jsonFile.readTemp());
-                        JSONObject average = rest.averageTempJsonFile();
-
-                        System.out.println("-------------------------\n");
-                        break;
+                        try {
+                            jsonFile.printObjects();
+                            rest.sumForTempCF(jsonFile.readTemp());
+                            JSONObject average = rest.averageTempJsonFile();
+                            System.out.println("-------------------------\n");
+                        } catch (FileNotFoundException e) {
+                            System.out.println("Filen finns inte \n");
+                        }
+                        continue;
                     case 4:
                         jsonFile.printObjects();
                         rest.medianTempJsonFile(jsonFile.readTemp());
                         System.out.println("-------------------------\n");
                         break;
                     case 5:
-                        jsonFile.printObjectsSeparate();
-                        System.out.println("-------------------------\n");
-                        break;
+                        try {
+                            jsonFile.printObjectsSeparate();
+                            System.out.println("-------------------------\n");
+                        } catch (FileNotFoundException e) {
+                            System.out.println("Filen finns inte");
+                            System.out.println("");
+                            continue;
+                        }
                     case 6:
                         quit = 'Y';
                         break;
