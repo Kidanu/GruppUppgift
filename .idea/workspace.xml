@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fc7d410-2ef0-4374-ba85-b3f71861b60d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AverageTemp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nya_filen.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JsonFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JsonFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Rest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Soap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Soap.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,42 +22,51 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="DockManager">
+    <window id="3">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/java/JsonFile.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="970">
+                    <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/java/Soap.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="700">
+                    <caret line="42" column="27" lean-forward="true" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                      <element signature="method#callSoapWebService#0;class#Soap#0" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="1275">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/JsonFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Soap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" column="97" selection-start-line="16" selection-start-column="97" selection-end-line="16" selection-end-column="97" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#main#0;class#Soap#0" />
-                <element signature="method#convertsCelsiusToFarenheit#0;class#Soap#0" />
-                <element signature="method#callSoapWebService#0;class#Soap#0" />
+                <element signature="e#286#294#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,16 +75,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Rest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state relative-caret-position="-114">
+              <caret line="106" column="51" selection-start-line="106" selection-start-column="51" selection-end-line="106" selection-end-column="51" />
               <folding>
-                <element signature="method#main#0;class#Rest#0" />
-                <element signature="e#734#931#0" />
-                <element signature="method#sumForTempC#0;class#Rest#0" />
-                <element signature="method#sumForTempF#0;class#Rest#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#sumForTempCF#0;class#Rest#0" />
                 <element signature="method#averageTempMethodF#0;class#Rest#0" />
                 <element signature="method#averageTempMethodC#0;class#Rest#0" />
                 <element signature="method#averageTempJsonFile#0;class#Rest#0" />
+                <element signature="e#3833#3842#0" expanded="true" />
+                <element signature="e#4112#4120#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,11 +119,11 @@
         <option value="$PROJECT_DIR$/src/main/java/API.java" />
         <option value="$PROJECT_DIR$/Nya_filenTwo.json" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Soap.java" />
         <option value="$PROJECT_DIR$/Nya_filen.json" />
         <option value="$PROJECT_DIR$/Temp.json" />
+        <option value="$PROJECT_DIR$/src/main/java/Soap.java" />
         <option value="$PROJECT_DIR$/src/main/java/JsonFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Rest.java" />
       </list>
     </option>
@@ -131,7 +147,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,6 +182,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -240,8 +256,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.13646056" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.141258" />
       <window_info id="Structure" order="1" sideWeight="0.50080514" side_tool="true" weight="0.13646056" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -255,7 +272,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32719395" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32719395" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32991454" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32719395" />
@@ -284,13 +301,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nya_filenTwo.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Nya_filenTwo.json" />
     <entry file="file://$USER_HOME$/Downloads/RestTest2 (1).java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
@@ -313,6 +324,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Temp.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Nya_filen.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="58" lean-forward="true" selection-start-column="58" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AverageTemp.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="51" lean-forward="true" selection-start-column="51" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tobbef.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -320,37 +354,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Temp.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AverageTemp.json">
+    <entry file="file://$PROJECT_DIR$/hejAverage.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="63" lean-forward="true" selection-start-column="63" selection-end-column="63" />
+          <caret column="21" selection-start-column="19" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nya_filen.json">
+    <entry file="file://$PROJECT_DIR$/ettA.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="65" lean-forward="true" selection-start-column="65" selection-end-column="65" />
+          <caret column="46" lean-forward="true" selection-start-column="46" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JsonFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="970">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -359,29 +380,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Soap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="97" selection-start-line="16" selection-start-column="97" selection-end-line="16" selection-end-column="97" />
+        <state relative-caret-position="700">
+          <caret line="42" column="27" lean-forward="true" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#Soap#0" />
-            <element signature="method#convertsCelsiusToFarenheit#0;class#Soap#0" />
             <element signature="method#callSoapWebService#0;class#Soap#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ettF.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="56" lean-forward="true" selection-start-column="56" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ett.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ettm.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#286#294#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Rest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        <state relative-caret-position="-114">
+          <caret line="106" column="51" selection-start-line="106" selection-start-column="51" selection-end-line="106" selection-end-column="51" />
           <folding>
-            <element signature="method#main#0;class#Rest#0" />
-            <element signature="e#734#931#0" />
-            <element signature="method#sumForTempC#0;class#Rest#0" />
-            <element signature="method#sumForTempF#0;class#Rest#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#sumForTempCF#0;class#Rest#0" />
             <element signature="method#averageTempMethodF#0;class#Rest#0" />
             <element signature="method#averageTempMethodC#0;class#Rest#0" />
             <element signature="method#averageTempJsonFile#0;class#Rest#0" />
+            <element signature="e#3833#3842#0" expanded="true" />
+            <element signature="e#4112#4120#0" expanded="true" />
           </folding>
         </state>
       </provider>

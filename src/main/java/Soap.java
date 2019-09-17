@@ -1,30 +1,38 @@
 import org.json.JSONArray;
 import org.json.JSONObject;
-import sun.plugin2.message.Message;
 
 import javax.xml.soap.*;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Soap {
+    Main main = new Main();
     String xmlUrl = "https://www.w3schools.com/xml/tempconvert.asmx?WSDL";
+    Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
+
         //String svar = callSoapWebService("25");
     }
 
     //Här använder vi värdet Celius från JSonfilen med arrayen och hämtar ut farenheit värden med hjälp utav callSoapMetoden
-    public static JSONObject convertsCelsiusToFarenheit(JSONObject jsonCelsius) throws Exception {
+    public JSONObject convertsCelsiusToFarenheit(JSONObject jsonCelsius) throws Exception {
         JSONArray array = jsonCelsius.getJSONArray("Temperatur");
-
-        for (int i = 0; i < array.length(); i++) {
-            JSONObject arrayObjekt = array.getJSONObject(i);
-            String svarTemp = arrayObjekt.get("C").toString();
-            String farenheit = callSoapWebService(svarTemp);
-            arrayObjekt.put("F", farenheit);
-        }
+        JSONObject arrayObjekt = null;
         try {
-            FileWriter file = new FileWriter("Nya_filen.json"); //Skapar en ny jsonfil med även Farenheit värden i.
+            for (int i = 0; i < array.length(); i++) {
+                arrayObjekt = array.getJSONObject(i);
+                String svarTemp = arrayObjekt.get("C").toString();
+                String farenheit = callSoapWebService(svarTemp); //Här stoppar vi in svaret utav det vi får från callSoapMetoden
+                arrayObjekt.put("F", farenheit);
+            }
+
+
+            System.out.println("Skriv namn på jsonfil som får farenheitvärden i");
+            main.jsonfileName = scan.nextLine();
+            FileWriter file = new FileWriter(main.jsonfileName + ".json"); //Skapar en ny jsonfil med även Farenheit värden i.
+            main.jsonFileNameArray.add(main.jsonfileName);
             file.write(jsonCelsius.toString());
             file.close();
 
@@ -32,11 +40,10 @@ public class Soap {
             e.printStackTrace();
         }
 
-        return jsonCelsius;
+        return arrayObjekt;
     }
 
-
-    private static String callSoapWebService(String Celsius) throws Exception {
+    private String callSoapWebService(String Celsius) throws Exception {
         String xmlUrl = "https://www.w3schools.com/xml/tempconvert.asmx?WSDL";
 
         MessageFactory messageFactory = MessageFactory.newInstance();//Skapar mallen till SoapMessage, SoapEnvelope, SoapPart och SoapHeader.
@@ -49,9 +56,9 @@ public class Soap {
         SOAPBody soapBody = soapEnvelope.getBody();
         SOAPElement soapElement = soapBody.addChildElement("CelsiusToFahrenheit", "ns1");
         SOAPElement soapElement2 = soapElement.addChildElement("Celsius", "ns1");
-        soapElement2.addTextNode(Celsius);
+        soapElement2.addTextNode(Celsius);//Skriver in Celsius graden mellan taggarna i xml funktionen.
 
-        SOAPConnectionFactory soapConnectionFactory = SOAPConnectionFactory.newInstance(); // För att skapa connection måste finnas en ny instance.
+        SOAPConnectionFactory soapConnectionFactory = SOAPConnectionFactory.newInstance();
         SOAPConnection soapConnection = soapConnectionFactory.createConnection();
         SOAPMessage soapResponse = soapConnection.call(soapMessages, xmlUrl);//Hämtar ut hela bodyn med xml-kod där värdet farenheit finns.
         //System.out.println(soapResponse.getSOAPBody().getTextContent());
